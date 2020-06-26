@@ -1,0 +1,86 @@
+<style>
+h3{
+	padding-left: 15px;
+}
+
+hr{
+	border: 1px solid red;
+  }
+p{
+	 padding: 10px;
+	font-size: 16px;
+	
+}
+</style>
+<div id="slides" class="carousel slide" data-ride="carousel">
+	<ul class="carousel-indicators">
+		<li data-target="#slides" data-slide-to="0" class="active"></li>
+		<li data-target="#slides" data-slide-to="1"></li>
+		 
+	</ul>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="img/backj.jpg" width="1350px" height="600px">
+			<div class="carousel-caption">
+				<div class="carousel-caption">
+					<h1 class="display-2">AIDD</h1>
+					<h3 class="display-2" style="color:white;">Empowering ADHD</h3>
+					 
+				</div>
+			</div>
+		</div>
+		<div class="carousel-item">
+				<img src="img/back.jpg" width="1400px" height="600px" alt="">
+				<div class="carousel-caption">
+					<div class="carousel-caption">
+						<h1 class="display-2">AIDD</h1>
+						<h3 class="display-2" style="color:white;">Empowering ADHD</h3>
+						 
+					</div>
+				</div>
+		</div>
+		 
+	</div>
+</div>
+<br>
+<h3>Basic Information</h3>
+<hr >
+ <p class="list-group-item" >
+	ADHD is one of the most common neurodevelopmental disorders of childhood. It is usually first diagnosed in childhood and often lasts into adulthood. Children with ADHD may have trouble paying attention, controlling impulsive behaviors (may act without thinking about what the result will be), or be overly active.
+ </p>
+ <h3>Types</h3>
+ <hr>
+<p >
+	There are three different types of ADHD, depending on which types of symptoms are strongest in the individual:
+    <ul class="list-group">
+		<li class="list-group-item">Predominantly Inattentive Presentation: It is hard for the individual to organize or finish a task, to pay attention to details, or to follow instructions or conversations. The person is easily distracted or forgets details of daily routines.</li>
+		<li class="list-group-item">Predominantly Hyperactive-Impulsive Presentation: The person fidgets and talks a lot. It is hard to sit still for long (e.g., for a meal or while doing homework). Smaller children may run, jump or climb constantly. The individual feels restless and has trouble with impulsivity. Someone who is impulsive may interrupt others a lot, grab things from people, or speak at inappropriate times. It is hard for the person to wait their turn or listen to directions. A person with impulsiveness may have more accidents and injuries than others.</li>
+		<li class="list-group-item">Combined Presentation: Symptoms of the above two types are equally present in the person.</li>
+
+    </ul>
+</p>
+<h3>Causes of ADHD</h3>
+<hr>
+<p>
+	Scientists are studying cause(s) and risk factors in an effort to find better ways to manage and reduce the chances of a person having ADHD. The cause(s) and risk factors for ADHD are unknown, but current research shows that genetics plays an important role. Recent studies of twins link genes with ADHD
+	In addition to genetics, scientists are studying other possible causes and risk factors including:
+	<ul class="list-group">
+		<li class="list-group-item">Brain injury</li>
+		<li class="list-group-item">Exposure to environmental (e.g., lead) during pregnancy or at a young age</li>
+		<li class="list-group-item">Alcohol and tobacco use during pregnancy</li>
+		<li class="list-group-item">Premature delivery</li>
+		<li class="list-group-item">Low birth weight</li>
+	</ul>
+</p>
+<h3>Managing Symptoms: Staying Healthy</h3>
+<hr>
+<p>
+	Being healthy is important for all children and can be especially important for children with ADHD. In addition to behavioral therapy and medication, having a healthy lifestyle can make it easier for your child to deal with ADHD symptoms. Here are some healthy behaviors that may help:
+	<ul class="list-group">
+		<li class="list-group-item">Eating a healthful diet centered on fruits, vegetables, whole grains, legumes (for example, beans, peas, and lentils), lean protein sources, and nuts and seeds</li>
+		<li class="list-group-item">Participating in physical activity for at least 60 minutes each day</li>
+		<li class="list-group-item">Limiting the amount of daily screen time from TVs, computers, phones, etc.</li>
+        <li class="list-group-item">Getting the recommended amount of sleep each night based on age</li>
+	</ul>
+</p>
+<br>

@@ -1,0 +1,57 @@
+<header id="header-bar" class="wrap">
+  
+   <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="clearfix">
+            <div id="logo"><a href="#"><img class="img-responsive" src="../public/images/logo.png" alt=""/></a></div>
+            
+            <nav class="navbar navbar-custom" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse-navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+            <div class="collapse navbar-collapse" id="collapse-navigation">
+              <ul class="nav menu-nav">
+                <li class="current_page_item"><a href="#">Home</a></li>
+              <li><a href="{{url('/about')}}">About</a>
+                 <ul class="sub-menu">
+	   <li><a href="faq.html">FAQ</a></li>
+	   <li><a href="testimonials.html">Testimonials</a></li>
+       <li><a href="pricing-table.html">Pricing Table</a></li>
+       <li><a href="404-page.html">404 Page</a></li>
+   </ul>
+                </li>
+                <li><a href="teachers.html">Teachers</a>
+                <ul class="sub-menu">
+	          <li><a href="single-teacher.html">Single Teacher</a></li>
+			   </ul>
+                </li>
+                <li><a href="gallery-3col.html">Galleries</a>
+      <ul class="sub-menu">
+	   <li><a href="gallery-2col.html">2 Columns</a></li>
+	   <li><a href="gallery-3col.html">3 Columns</a></li>
+       <li><a href="gallery-4col.html">4 Columns</a></li>
+       <li><a href="single-gallery-1.html">Single Gallery Album</a></li>
+   </ul>
+      </li>
+      			<li><a href="events-3col.html">Events</a>
+                <ul class="sub-menu">
+	   <li><a href="events-2col.html">2 Columns</a></li>
+	   <li><a href="events-3col.html">3 Columns</a></li>
+       <li><a href="single-event.html">Single Event</a></li>
+  				</ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+            
+          </nav>
+           
+          </div><!--.clearfix-->
+  
+      </div><!--.col-md-12-->
+    </div><!--.row-->
+    </div><!--.container-->
+  </header><!-- header-bar-->
+  

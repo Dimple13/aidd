@@ -1,0 +1,103 @@
+#man{
+display: none;
+}
+#start{
+  margin:auto;
+    text-align:center;
+    /* border:1px solid grey; */
+    width:1000px;
+    height:500px;
+    margin-top: 100px;
+    /* background-color:#282828; */
+}
+.card{
+    margin:auto;
+  width:100px;
+  height:50px;
+  /* margin:20px; */
+  background-color: #3500D3;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  border-radius:20px;
+  border:10px;
+  margin-top:40px;
+  font-size: x-large;
+  color: white;
+}
+.card-color{
+  width:100px;
+  height:50px;
+  margin:auto;
+  /* margin:20px; */
+  border-radius:80px;
+  background-color: #3500D3;
+/*   border: 1px solid grey; */
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin-top: 45px;
+}
+#q{
+  position: relative;
+}
+.scoring{
+    margin:auto;
+  width:100px;
+  height:50px;
+  /* border:1px solid grey;
+  border-radius:80px; */
+  font-size: 15px;
+  margin-left:auto;
+  display:flex;
+  color:#3500D3;
+}
+#man{
+    margin:auto;
+    text-align:center;
+    /* border:1px solid grey; */
+    width:700px;
+    height:700px;
+    /* margin-top: 100px; */
+    /* background-color: #282828; */
+}
+#progressBar{
+  visibility: hidden;
+}
+.text{
+  color:black;
+}
+.but{
+  background-color: #3500D3;
+}
+.ladoo{
+  position:fixed;
+  display:flex;
+  left:74%;
+  margin-top:0px;
+  height:58px;
+}
+@media(min-width:760px) and (max-width:1000px)
+{
+  .ladoo{
+    left:64%;
+    width: 70px;
+  }
+}
+@media(min-width:1000px) and (max-width:2000px)
+{
+  .ladoo{
+    left:56%;
+    width: 70px;
+  }
+}
+
+@media(max-width:350px)
+{
+  .ladoo{
+    left:79%;
+    height: 40px;
+  }
+}

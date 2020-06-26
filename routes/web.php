@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +11,57 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'PagesController@index');
+Route::get('/symptoms', 'PagesController@symp_diag');
+Route::get('/treatment', 'PagesController@treatment');
+Route::get('/more', 'PagesController@moreonadhd');
+Route::get('/videos', 'PagesController@videos');
+Route::get('/exercises', 'PagesController@exercises');
+Route::get('/tictactoe', 'GamesController@Tictactoe');
+Route::get('/numnext', 'GamesController@NumNext');
+Route::get('/memnext', 'GamesController@MemNext');
+Route::get('/flappy', 'GamesController@Flappy');
+Route::get('/shape', 'GamesController@Shape');
+Route::get('/memory', 'GamesController@Memory');
+Route::get('/stroop', 'GamesController@Stroop');
+Route::get('/connectdots', 'GamesController@connectdots');
+Route::get('/maze', 'GamesController@maze');
+// Route::get('/spot', 'GamesController@spot');
+Route::get('/age','AgeController@index');
+Route::get('/age_result','AgeController@store');
+Route::get('/spot', 'GamesController@spot');
+Route::get('/numbers','GamesController@numbers');
+Route::get('/MissingLetters','GamesController@MissingLetters');
+Route::get('/flappy','GamesController@flappy');
+Route::get('/spotrevert','GamesController@spotrevert');
+Route::get('/strooprevert','GamesController@strooprevert');
+Route::get('/graph','ChartController@graph');
+Route::get('/progress1','PagesController@progress1');
+/*extra pages*/
+Route::get('/about','PagesController@about');
+Route::get('/faq','PagesController@faq');
+Route::get('/blog','PagesController@blog');
+// Route::get('/exercises',function(){
+//     if(Auth::guest()){
+//         return View::make('auth.login');
+//     }
+//     return View::make('pages.exercises');
+// });
+// Route::get('/demo', function () {
+//         return view('inc.exe_navbar');
+//     });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+// Routes for getting data
+Route::post('/stroop_result','StroopController@store');
+
+Route::get('/mem_result','MemoryController@store');
+// Route::get('/dem','StroopController@store');
+Route::get('/page',function(){
+    return view('pages.exe_page');
 });
