@@ -1,9 +1,3 @@
-<?php
-
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
-
 class CreateAdminsTable extends Migration
 {
     /**
@@ -15,8 +9,12 @@ class CreateAdminsTable extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('email')->unique();
+            $table->string('password');        
         });
+ 	DB::table('admins')->insert([
+            ['email' => 'Dimple@abc.com', 'password' => 123456],
+        ]);
     }
 
     /**
