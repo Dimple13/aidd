@@ -22,7 +22,7 @@ class CreateAdminsTable extends Migration
             $table->timestamps();       
         });
  	    DB::table('admins')->insert([
-            ['email' => 'Dimple@gmail.com', 'password' => 123456],
+            ['email' => 'Dimple@gmail.com', 'password' => '$2y$10$jjx1nioaJF.xGxmULwSt3uKQW6sZEToUhp9hJ8.thqwowncTYDhW6'],
         ]);
     }
 
