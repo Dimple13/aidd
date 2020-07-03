@@ -1,3 +1,9 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
 class CreateAdminsTable extends Migration
 {
     /**
@@ -12,8 +18,8 @@ class CreateAdminsTable extends Migration
             $table->string('email')->unique();
             $table->string('password');        
         });
- 	DB::table('admins')->insert([
-            ['email' => 'Dimple@abc.com', 'password' => 123456],
+ 	    DB::table('admins')->insert([
+            ['email' => 'Dimple@gmail.com', 'password' => 123456],
         ]);
     }
 
