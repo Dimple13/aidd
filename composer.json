@@ -12,7 +12,8 @@
         "consoletvs/charts": "5.*",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "php-ai/php-ml": "^0.9.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -58,10 +59,6 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ],
-        "post-install-cmd": [
-            "php artisan clear-compiled",
-            "chmod -R 777 public/"
         ]
     }
 }

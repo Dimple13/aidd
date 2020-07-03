@@ -35,6 +35,15 @@
         <link rel="stylesheet" type="text/css" href="{{asset('progress/trial.css')}}">
     
     </head>
+    <style>
+    div.container4 {
+    margin: 0;
+    position: absolute;
+    margin-top:100px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+    </style>
     <body style="background:url({{asset('images/bkg.svg')}}) repeat scroll center center #E9F8FC;">
         <div id="main" class="wrap">
             <!-- <div id="mySidenav" class="sidenav">
@@ -69,11 +78,13 @@
                             </div>
                             {{-- Template-Part --}}
                             <h1>Stroop test</h1>
-                            <div id="start" style="margin-left:100px;margin-bottom:100px;width:100%;padding-top:30px">
+                            <div class="container4">
+                            <div id="start" style="margin-bottom:100px;width:100%;padding-top:30px">
                                 <button onclick="start()" style="height:50px;width:100px;background-color: #ffffff;font-size:15px;" id="st" >Start exercise</button>
                                 <br>
                                 <br>
                                 <button onclick="location.href = '{{url('/exercises')}}'" style="height:50px;width:100px;background-color: #ffffff;font-size:15px;" id="st" >Go back</button>
+                            </div>
                             </div>
     
                             <div id="man" style="width:100%">

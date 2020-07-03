@@ -7,6 +7,24 @@
     <link rel="stylesheet" type="text/css" href="{{asset('maze.css')}}">
     <link type="text/css" href="{{asset('pause.css')}}" rel="stylesheet">
 </head>
+<style>button {
+	border-radius :5px;
+	border : 5px solid black;
+	background-color : black;
+	position:absolute ;
+    color:white;
+    margin: 0;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    }
+    div.container4 {
+    margin: 0;
+    position: absolute;
+    margin-top:100px;
+    left: 47%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+    </style>
 <!-- <div id="main" class="wrap">
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -146,6 +164,7 @@
                                 handled = true
                                 break;
                             case 87:   
+                            
                                 m.moveup("canvas");
                                 handled = true
                                 break;
@@ -182,6 +201,26 @@
                     if (handled)
                         evt.preventDefault();  
                 }
+                
+                function down(){
+                    m.movedown("canvas");
+                    handled = true
+                    if (m.checker("canvas"))
+                            playing = false
+                        console.log(m.getMoves())
+                }
+                function up(){
+                    m.moveup("canvas");
+                    handled = true
+                }
+                function right(){
+                    m.moveright("canvas");
+                    handled = true
+                }
+                function left(){
+                    m.moveleft("canvas");
+                    handled = true
+                    }
         
         
                 var dsd = function (size) {
@@ -207,6 +246,7 @@
                             this.R[v] = this.R[u] + 1;
                             this.P[v] = u;
                         }
+                       
                     }
         
                     this.find = function (x) {
@@ -215,6 +255,7 @@
                         this.P[x] = this.find(this.P[x]);
                         return this.P[x];
                     }
+                    
                 };
         
                 function random(min, max)      { return (min + (Math.random() * (max - min)));            };
@@ -252,7 +293,9 @@
                                 }
                                 this.vis[i][j] = 0;
                             }
+                            
                         }
+                        
                     }
         
         
@@ -283,13 +326,13 @@
                         }
                         return EL;
                     }
-        
+      
                     this.breakwall = function (e) {
                         var x = e[0][0] + e[1][0] + 1;
                         var y = e[0][1] + e[1][1] + 1;
                         this.Board[x][y] = ' ';
+                       
                     }
-        
                     this.gen_maze = function () {
                         this.EL = this.randomize(this.EL);
                         var D = new dsd(this.M * this.M);
@@ -309,7 +352,7 @@
                                         this.breakwall(this.EL[i]);
                                         this.EL[i][2] = 0;
                                     }
-        
+                            
                                 }
                                  
                             }
@@ -322,7 +365,10 @@
                             else {
                                 continue;
                             }
+                            
+                          
                         }
+                        
         
                     };
         
@@ -469,12 +515,13 @@
                     }
         
                 };
-        
+
                 m = new maze(10 , 10);
                 m.init();
                 m.add_edges();
                 m.gen_maze();
                 m.draw_canvas("canvas");
+                
                 function drawMoves() {
                     document.getElementById("c").innerHTML = "Moves: "+ m.getMoves()
                 }
@@ -494,13 +541,26 @@
 </div><!-- col-md-12-->
 
 </div><!--end row-->
-<div style="padding-left:125px">
+<br>
+<!-- <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick ="up()" >U</button><br><br><button onclick="left()" >L</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick = "right()">R</button><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick = "down()">D</button>
+<br>
+<br>
+<div>
 <button onclick="location.href = '{{url('/exercises')}}'" style="height:50px;width:80px;background-color: #ffffff;font-size:15px;color:black;border:1px solid black;" id="st" >Go back</button>
-</div>
+</div> -->
 </div><!--end container-->
 {{-- 
 </div><!-- bkg-cover--> --}}
-
+<div class="container4" style="align-text:center">
+<!-- <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick ="up()" >U</button><br><br><button onclick="left()" >L</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick = "right()">R</button><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick = "down()">D</button> -->
+<div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick="up" >U</button><br><br><button onclick="left()" >L</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick = "right()">R</button><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick = "down()">D</button>
+<br>
+<br>
+<div>
+<br>
+<button onclick="location.href = '{{url('/exercises')}}'" style="height:50px;width:80px;background-color: #ffffff;font-size:15px;color:black;border:1px solid black;margin-left:0px" id="st" >Go back</button>
+</div>
+</div>
 </section><!-- home-testimonials-->
 
 {{-- <div class="zz-top-foo"></div>

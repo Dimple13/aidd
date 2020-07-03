@@ -21,6 +21,7 @@ Route::get('/treatment', 'PagesController@treatment');
 Route::get('/more', 'PagesController@moreonadhd');
 Route::get('/videos', 'PagesController@videos');
 Route::get('/exercises', 'PagesController@exercises');
+Route::get('/exercises1', 'PagesController@exercises1');
 Route::get('/tictactoe', 'GamesController@Tictactoe');
 Route::get('/numnext', 'GamesController@NumNext');
 Route::get('/memnext', 'GamesController@MemNext');
@@ -45,6 +46,8 @@ Route::get('/progress1','PagesController@progress1');
 Route::get('/about','PagesController@about');
 Route::get('/faq','PagesController@faq');
 Route::get('/blog','PagesController@blog');
+Route::get('/logop','PagesController@Log');
+Route::get('/snakescore','SnakeController@model');
 // Route::get('/exercises',function(){
 //     if(Auth::guest()){
 //         return View::make('auth.login');
@@ -55,6 +58,11 @@ Route::get('/blog','PagesController@blog');
 //         return view('inc.exe_navbar');
 //     });
 Auth::routes();
+Route::prefix('admin')->group(function(){
+    Route::get('/login','Auth\AdminLoginController@showLoginform')->name('admin.login');
+    Route::post('/login','Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 // Routes for getting data
@@ -65,3 +73,7 @@ Route::get('/mem_result','MemoryController@store');
 Route::get('/page',function(){
     return view('pages.exe_page');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

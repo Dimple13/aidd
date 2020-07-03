@@ -69,7 +69,7 @@
                 <li>
                     <!-- Authentication Links -->
                   @if (Auth::guest())
-                    <li><a href="{{ route('login') }}">Login &nbsp;</a></li>
+                    <li><a href="{{ url('/logop') }}">Login &nbsp;</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>
                   @else
                     <li class="dropdown">
@@ -138,7 +138,7 @@
                 <li>
                     <!-- Authentication Links -->
                   @if (Auth::guest())
-                    <li class="mobile_item"><a href="{{ route('login') }}">Login &nbsp;</a></li>
+                    <li class="mobile_item"><a href="{{ url('/logop') }}">Login &nbsp;</a></li>
                     <li class="mobile_item"><a href="{{ route('register') }}">Register</a></li>
                   @else
                     <li class="dropdown mobile-item">

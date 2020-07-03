@@ -47,6 +47,9 @@ var context = canvas.getContext('2d');
 
 var grid = 12;
 var count = 0;
+var wrong_move=0;
+var correct_move=0;
+var diff=0;
   
 var snake = {
   x: 0,
@@ -111,6 +114,13 @@ function loop() {
   }
 
   // draw apple
+  if((snake.dy<0 && snake.y<apple.y) || (snake.dx<0 && snake.x<apple.x) || (snake.dy>0 && snake.y>apple.y) || (snake.dx>0 && snake.x>apple.x))
+   { wrong_move++;
+  }
+  else
+  {
+    correct_move++;
+  }
   context.fillStyle = 'red';
   context.fillRect(apple.x, apple.y, grid, grid);
 
@@ -123,6 +133,7 @@ function loop() {
 
 	// snake ate apple
 	if (cell.x === apple.x && cell.y === apple.y) {
+    
 	  snake.maxCells += 4;
 
 	  // canvas is 400x400 which is 25x25 grids 
@@ -142,8 +153,16 @@ function loop() {
 		snake.dx = grid;
 		snake.dy = 0;
 
+
 		apple.x = getRandomInt(0, 25) * grid;
 		apple.y = getRandomInt(0, 25) * grid;
+    diff=(correct_move-wrong_move)/correct_move;
+    document.getElementById("diff").innerHTML=diff;
+   
+
+    console.log(diff);
+    wrong_move=0;
+    correct_move=0;
       }
       
     }
@@ -207,11 +226,13 @@ function up(){
   }
 // start the game
 requestAnimationFrame(loop);
+
 </script>
 <br>
 <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick ="up()" >U</button><br><br><button onclick="left()" >L</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick = "right()">R</button><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick = "down()">D</button>
 <br>
 <br>
+<p id="diff" style="visibility:hidden;font-size:1px" name="diff"></p>
 <button onclick="location.href = '{{url('/exercises')}}'" style="height:50px;width:80px;background-color: #ffffff;font-size:15px;color:black;border:1px solid black" id="st" >Go back</button>
 </div>
 </body>

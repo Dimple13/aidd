@@ -199,6 +199,12 @@ function Board (options){
 
     function buttonHTML(btnGroup, data, text){
       return `<button type="button" class="btn btn-lg btn-default btnGroup${btnGroup}" data=${data}>${text}</button>`
+      // return` <input type="image" src="${text}" alt="Submit" width="48" height="48">`
+    }
+
+    function buttonHTML1(btnGroup, data, text){
+      // return `<button type="button" class="btn btn-lg btn-default btnGroup${btnGroup}" data=${data}>${text}</button>`
+      return` <input type="image" src="${text}" alt="Submit" width="48" height="48">`
     }
 
     function htmlSpaces (times){
@@ -211,7 +217,6 @@ function Board (options){
       ${buttonHTML(1, "2players", "Man Against Man")}
       </div>`
     }
-
     function htmlQ2(){
       const html2=`<div id="view2"><h3>${!state.players[1].isComputer? "Player 1, <br />" : ""}Which symbols would you like to use?</h3>
       ${buttonHTML(2, "X", "X")}

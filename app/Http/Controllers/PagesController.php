@@ -37,5 +37,9 @@ class PagesController extends Controller
     public function progress1(){
         return view('pages.progress1');
     } 
+    public function Log(){
+        return view('pages.logop');
+    } 
+    
         
 }

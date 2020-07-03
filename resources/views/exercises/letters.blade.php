@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Missing letter</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700&amp;subset=latin-ext">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/btn.css')}}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{asset('css/btn.css')}}"> -->
     <link rel="stylesheet" type="text/css" href="{{asset('css/stroop1.css')}}">
     <!-- <link rel="stylesheet" type="text/css" href="public/css/trial.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -27,12 +27,14 @@
             <div class="row">
                 <div class="col-md-12 main">
         <!-- {{-- Template-Part --}} -->
-        			<div id="start" style="margin-bottom:100px;width:100%;">
+        			<center><div id="start" style="margin-bottom:100px;width:100%;margin:0px">
                         <button onclick="start()" style="height:50px;width:80px;background-color: #ffffff;font-size:15px;" id="st" >Start exercise</button>
+                        <br>
+                        <br>
                         <br>
                         <button onclick="location.href = '{{url('/exercises')}}'" style="height:50px;width:80px;background-color: #ffffff;font-size:15px;" id="st" >Go back</button>
                     </div>
-                    
+                    </center>
                     
                     <div id="man" style="width:100%; height:100%">
                         <center><h1 style="font-family:sans-serif">Missing Letters</h1>
