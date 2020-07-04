@@ -12,7 +12,7 @@
 <center><button onclick="location.href = '{{url('/snakescore')}}'" style="height:70px;width:100px;background-color: #ffffff;font-size:15px;" id="st" > Speed stats</button></center>
 <br>
 
-<center><button onclick="location.href = '{{url('/exercises')}}'" style="height:70px;width:100px;background-color: #ffffff;font-size:15px;" id="st" >Go back</button></center>
+<!-- <center><button onclick="location.href = '{{url('/exercises')}}'" style="height:70px;width:100px;background-color: #ffffff;font-size:15px;" id="st" >Go back</button></center> -->
 
 
 </button>
