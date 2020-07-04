@@ -15,6 +15,7 @@ class CreateAdminsTable extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -22,7 +23,7 @@ class CreateAdminsTable extends Migration
             $table->timestamps();       
         });
  	    DB::table('admins')->insert([
-            ['email' => 'Dimple@gmail.com', 'password' => '$2y$10$jjx1nioaJF.xGxmULwSt3uKQW6sZEToUhp9hJ8.thqwowncTYDhW6'],
+            ['name'=>'Dimple','email' => 'Dimple@gmail.com', 'password' => '$2y$10$jjx1nioaJF.xGxmULwSt3uKQW6sZEToUhp9hJ8.thqwowncTYDhW6'],
         ]);
     }
 
