@@ -132,7 +132,7 @@ and set 'stroke-dasharray' and
 */
 </script>
 <body style="background:url({{asset('images/bkg.svg')}}) repeat scroll center center #E9F8FC;">
-<h1 style="font-family:Times New Roman, Times, serif;">Speed statistics of snake game</h1>
+<h1 style="font-family:Times New Roman, Times, serif;">Speed statistics of colour match game</h1>
 <br>
 <center><div id="wrapper" class="center">
 	<svg class="progress blue noselect" data-progress={{$pred}} x="0px" y="0px" viewBox="0 0 80 80">
